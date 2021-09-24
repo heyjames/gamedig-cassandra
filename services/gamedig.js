@@ -22,15 +22,13 @@ async function getGamedigData(IPandPort) {
   }
 }
 
-async function getMultipleGamedigData(arrArg) {
+async function getMultipleGamedigData(IPandPorts) {
   try {
-    const result = [];
+    const data = [];
+    IPandPorts.forEach((IPandPort) => data.push(getGamedigData(IPandPort)));
+    const result = await Promise.all(data);
 
-    arrArg.forEach(async (IPandPort) => result.push(getGamedigData(IPandPort)));
-
-    const result2 = await Promise.all(result);
-
-    return result2;
+    return result;
   } catch (error) {
     throw error;
   }

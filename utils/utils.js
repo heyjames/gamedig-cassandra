@@ -19,7 +19,7 @@ function secondsToHMS(d) {
 // Takes an array of server numbers and converts them to their corresponding
 // server IPs.
 // Example: [0, 1, 2, 3] => [111.111.111:11111, 222.222.222:22222]
-function getIPsFromConfig() {
+function getIPandPortsFromConfig() {
   try {
     const IPs = [];
 
@@ -68,5 +68,5 @@ module.exports = {
   getDateTime,
   secondsToHMS,
   isCachedDataOld,
-  getIPsFromConfig,
+  getIPandPortsFromConfig,
 };
