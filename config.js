@@ -3,6 +3,7 @@ module.exports = {
   debugMode: false, // Outputs data to console after Gamedig query
   useSampleData: false, // Only applies to root route
   updateThreshold: 60, // Timeout in seconds until API gets new data
+  censorNames: false,
 
   // Map serversToQuery to serverMap keys
   serverMap: {

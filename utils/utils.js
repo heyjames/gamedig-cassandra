@@ -64,9 +64,28 @@ function isCachedDataOld(serverNumber) {
   return lastUpdatedAgo > updateThreshold;
 }
 
+/**
+ * Create a randomized string of any length using a range of specified characters.
+ * Source: stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+ *
+ * @param  {Number} charLen Length of desired random string.
+ * @return {String} Random string.
+ */
+function createRandomString(charLen) {
+  let result = "";
+  const chars = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-[]_ `;
+
+  for (let i = 0; i < charLen; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+  return result;
+}
+
 module.exports = {
   getDateTime,
   secondsToHMS,
   isCachedDataOld,
   getIPandPortsFromConfig,
+  createRandomString,
 };

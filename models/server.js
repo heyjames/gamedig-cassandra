@@ -1,4 +1,4 @@
-const { secondsToHMS } = require("../utils/utils");
+const { secondsToHMS, createRandomString } = require("../utils/utils");
 const config = require("../config");
 
 function mapDataToModel(data) {
@@ -19,7 +19,10 @@ function mapDataToModel(data) {
       map: config.maps[map] || map,
       numplayers,
       players: players.map((p) => {
-        return { name: p.name, time: secondsToHMS(p.raw.time) };
+        return {
+          name: config.censorNames ? createRandomString(p.name.length) : p.name,
+          time: secondsToHMS(p.raw.time),
+        };
       }),
       gamemode: GameMode_s,
       day: Day_b === "true",
