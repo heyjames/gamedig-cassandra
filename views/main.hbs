@@ -1,0 +1,45 @@
+<div>Last Update: {{lastUpdate}}</div>
+<div class="container">
+  {{#if listExists}}
+    {{#each servers}}
+      <ul class="server">
+        <li>{{this.name}}</li>
+        <li>
+          <span class="label-default">Map: </span>
+          <span class="value-default">{{this.map}}</span>
+        </li>
+        <li>
+          <span class="label-default">Player Count: </span>
+          <span class="value-default">{{this.numplayers}}</span>
+        </li>
+        <span class="label-default">Players: </span>
+        <ul class="players">
+          {{#each this.players}}
+            <li style="line-style: circle inside;">
+              <span class="player">{{this.name}} </span>
+              <span class="time">{{this.time}}</span>
+            </li>
+          {{/each}}
+        </ul>
+        <li>
+          <span class="label-default">Game Mode: </span>
+          <span {{#ifNotEquals this.gamemode "Checkpoint"}}class="value-danger"{{/ifNotEquals}}>{{this.gamemode}}</span>
+        </li>
+        <li>
+          <span class="label-default">Day: </span>{{this.day}}</li>
+        <li>
+          <span class="label-default">Night: </span>
+          <span {{#if this.night}}class="value-danger"{{/if}}>{{this.night}}</span>
+        </li>
+        <li>
+          <span class="label-default">Mutated: </span>
+          <span {{#if this.mutated}}class="value-danger"{{/if}}>{{this.mutated}}</span>
+        </li>
+        <li>
+          <span class="label-default">Mutators: </span>
+          <span {{#if this.mutators}}class="value-danger"{{/if}}>{{this.mutators}}</span>
+        </li>
+      </ul>
+    {{/each}}
+  {{/if}}
+</div>

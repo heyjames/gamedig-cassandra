@@ -1,0 +1,42 @@
+{
+  "name": "Cassandra.Confluvium 2 | Slow Mil-Tactical Squad Play Multimode",
+  "map": "Mountain",
+  "password": false,
+  "raw": {
+    "protocol": 17,
+    "folder": "sandstorm",
+    "game": "Insurgency: Sandstorm",
+    "appId": 581320,
+    "numplayers": 0,
+    "numbots": 0,
+    "listentype": "d",
+    "environment": "l",
+    "secure": 1,
+    "version": "1.1.0.0",
+    "steamid": "85568392922961508",
+    "tags": ["V:162288", "S:523", "MatchServer_b:false"],
+    "rules": {
+      "Coop_b": "true",
+      "CustomRules_b": "true",
+      "Day_b": "true",
+      "GameMode_s": "Checkpoint",
+      "MatchServer_b": "false",
+      "Mods_b": "false",
+      "Mutated_b": "false",
+      "Night_b": "false",
+      "OfficialRuleset_b": "false",
+      "PlrC_i": "0",
+      "PlrM_i": "10",
+      "Pwd_b": "false",
+      "RankedServer_b": "true",
+      "S": "523",
+      "Versus_b": "false"
+    }
+  },
+  "maxplayers": 10,
+  "players": [],
+  "bots": [],
+  "connect": "45.76.7.250:27102",
+  "ping": 95,
+  "updated_at": 1632389583345
+}

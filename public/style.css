@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(31, 31, 31);
+  font-family: Monospace;
+  font-size: 1.1em;
+  color: rgb(180, 180, 180);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.server {
+  list-style: none;
+  padding: 10px;
+  margin: 10 10 0 0;
+  border: 1px solid rgb(180, 180, 180);
+  width: 280px;
+}
+
+.label-default {
+  font-weight: bold;
+  color: rgb(90, 170, 255);
+}
+
+.value-default {
+  color: rgb(180, 180, 180);
+}
+
+.value-danger {
+  color: red;
+}
+
+.player {
+  font-weight: normal;
+  color: rgb(50, 177, 87);
+}
+
+.time {
+  color: rgb(71, 90, 62);
+}
+
+.page-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

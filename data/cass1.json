@@ -1,0 +1,42 @@
+{
+  "name": "Cassandra.Confluvium 1 | Slow Mil-Tactical Squad Play Day Only",
+  "map": "Canyon",
+  "password": false,
+  "raw": {
+    "protocol": 17,
+    "folder": "sandstorm",
+    "game": "Insurgency: Sandstorm",
+    "appId": 581320,
+    "numplayers": 1,
+    "numbots": 0,
+    "listentype": "d",
+    "environment": "l",
+    "secure": 1,
+    "version": "1.1.0.0",
+    "steamid": "85568392922961505",
+    "tags": ["V:162288", "S:523", "MatchServer_b:false"],
+    "rules": {
+      "Coop_b": "true",
+      "CustomRules_b": "true",
+      "Day_b": "true",
+      "GameMode_s": "Checkpoint",
+      "MatchServer_b": "false",
+      "Mods_b": "false",
+      "Mutated_b": "false",
+      "Night_b": "false",
+      "OfficialRuleset_b": "false",
+      "PlrC_i": "1",
+      "PlrM_i": "10",
+      "Pwd_b": "false",
+      "RankedServer_b": "true",
+      "S": "523",
+      "Versus_b": "false"
+    }
+  },
+  "maxplayers": 10,
+  "players": [],
+  "bots": [],
+  "connect": "104.207.128.84:27102",
+  "ping": 94,
+  "updated_at": 1632388812565
+}

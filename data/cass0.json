@@ -1,0 +1,49 @@
+{
+  "name": "Cassandra.Confluvium 0 | Slow Mil-Tactical Squad Play Day/Night",
+  "map": "Citadel",
+  "password": false,
+  "raw": {
+    "protocol": 17,
+    "folder": "sandstorm",
+    "game": "Insurgency: Sandstorm",
+    "appId": 581320,
+    "numplayers": 0,
+    "numbots": 0,
+    "listentype": "d",
+    "environment": "l",
+    "secure": 1,
+    "version": "1.1.0.0",
+    "steamid": "85568392922967973",
+    "tags": [
+      "V:162288",
+      "S:523",
+      "MatchServer_b:false",
+      "Mutators_s:ISMCarmory_legacy"
+    ],
+    "rules": {
+      "Coop_b": "true",
+      "CustomRules_b": "false",
+      "Day_b": "true",
+      "GameMode_s": "Checkpoint",
+      "MatchServer_b": "false",
+      "ModList_s": "882589,851105,851078,773324,575709,391659,165100,651273,448415,371483,94277,120200,150867",
+      "Mods_b": "true",
+      "Mutated_b": "true",
+      "Mutators_s": "ISMCarmory_legacy",
+      "Night_b": "false",
+      "OfficialRuleset_b": "false",
+      "PlrC_i": "0",
+      "PlrM_i": "10",
+      "Pwd_b": "false",
+      "RankedServer_b": "true",
+      "S": "523",
+      "Versus_b": "false"
+    }
+  },
+  "maxplayers": 10,
+  "players": [],
+  "bots": [],
+  "connect": "149.28.238.85:27102",
+  "ping": 84,
+  "updated_at": 1632386726180
+}
