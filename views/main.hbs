@@ -3,6 +3,12 @@
   {{#if listExists}}
     {{#each servers}}
       <ul class="server">
+
+      {{#unless this.success}}
+        <li>Query failed. Server may be restarting or offline.</li>
+      {{/unless}}
+
+      {{#if this.success}}
         <li>{{this.name}}</li>
         <li>
           <span class="label-default">Map: </span>
@@ -39,6 +45,8 @@
           <span class="label-default">Mutators: </span>
           <span {{#if this.mutators}}class="value-danger"{{/if}}>{{this.mutators}}</span>
         </li>
+      {{/if}}
+      
       </ul>
     {{/each}}
   {{/if}}

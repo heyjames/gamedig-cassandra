@@ -4,7 +4,9 @@ const config = require("../config");
 function mapDataToModel(data) {
   try {
     if (Object.keys(data).length === 0) {
-      throw new Error("Data object is empty");
+      return {
+        success: false, // Custom property
+      };
     }
 
     const { name, map, players, raw } = data;
@@ -12,6 +14,7 @@ function mapDataToModel(data) {
     const { Day_b, GameMode_s, Mutated_b, Mutators_s, Night_b } = rules;
 
     return {
+      success: true, // Custom property
       name: name.split("|")[0].trim(),
       map: config.maps[map] || map,
       numplayers,
