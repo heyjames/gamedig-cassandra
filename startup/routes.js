@@ -6,7 +6,7 @@ const helmet = require("helmet");
 const handlebars = require("express-handlebars");
 
 module.exports = (app) => {
-  app.use(helmet());
+  app.use(helmet({ contentSecurityPolicy: false }));
   app.use(express.static("public"));
   app.set("view engine", "hbs");
   app.engine(
