@@ -26,4 +26,7 @@ module.exports = (app) => {
   app.use("/api/server", server); // Returns JSON
   app.use("/", servers); // Returns HTML
   app.use("/", notfound);
+  app.use((error, req, res, next) => {
+    res.status(500).json({ error: error.message });
+  });
 };

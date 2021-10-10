@@ -6,7 +6,7 @@ const config = require("../config");
 const { getMultipleGamedigData } = require("../services/gamedig");
 const sampleData = require("../data/sample-data.json");
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
     let servers = [];
     const IPandPorts = getIPandPortsFromConfig();
@@ -32,7 +32,7 @@ router.get("/", async (req, res) => {
       listExists: true,
     });
   } catch (error) {
-    throw error;
+    next(error);
   }
 });
 

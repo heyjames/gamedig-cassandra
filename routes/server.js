@@ -12,7 +12,7 @@ const corsOptions = {
   methods: "GET",
 };
 
-router.get("/:serverNumber", cors(corsOptions), async (req, res) => {
+router.get("/:serverNumber", cors(corsOptions), async (req, res, next) => {
   const serverNumber = req.params.serverNumber;
   const IPandPort = config.serverMap[serverNumber];
   const dataFilePath = `${process.cwd()}/data/cass${serverNumber}.json`;
@@ -20,6 +20,10 @@ router.get("/:serverNumber", cors(corsOptions), async (req, res) => {
   let result = {};
 
   try {
+    // Intentional error for debugging
+    // const someNumber = 1;
+    // someNumber.replace("-", "");
+
     if (!IPandPort) return res.status(400).send("Invalid server number.");
 
     if (isCachedDataOld(serverNumber)) {
@@ -40,7 +44,7 @@ router.get("/:serverNumber", cors(corsOptions), async (req, res) => {
       res.send(result);
     }
   } catch (error) {
-    throw error;
+    next(error);
   }
 });
 
