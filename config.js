@@ -1,5 +1,5 @@
 module.exports = {
-  serversToQuery: [0, 1, 2, 3], // [0, 1, 2, 3]
+  serversToQuery: [0, 1, 2, 3, 4], // [0, 1, 2, 3, 4]
   debugMode: false, // Outputs data to console after Gamedig query
   useSampleData: false, // Only applies to root route
   updateThreshold: 60, // Timeout in seconds until API gets new data
@@ -11,6 +11,7 @@ module.exports = {
     1: "104.207.128.84:27131", // Cassandra 1
     2: "45.76.7.250:27131", // Cassandra 2
     3: "104.207.128.84:27151", // Cassandra 3
+    4: "108.61.95.81:27131", // Cassandra M
   },
 
   // Cross-site Origin Policy
