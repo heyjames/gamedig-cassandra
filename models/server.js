@@ -15,7 +15,9 @@ function mapDataToModel(data) {
 
     return {
       success: true, // Custom property
-      name: name.split("|")[0].trim(),
+      name: config.shortenCassandraTitle
+        ? name.split("|")[0].trim()
+        : name.trim(),
       map: config.maps[map] || map,
       numplayers,
       players: players.map((p) => {
