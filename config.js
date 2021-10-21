@@ -1,5 +1,5 @@
 module.exports = {
-  serversToQuery: [0, 1, 2, 3], // [0, 1, 2, 3]
+  serversToQuery: [0, 1, 2, 3, 4], // [0, 1, 2, 3]
   debugMode: false, // Outputs data to console after Gamedig query
   shortenCassandraTitle: true,
   useSampleData: false, // Only applies to root route
@@ -12,6 +12,7 @@ module.exports = {
     1: "108.61.95.81:27131", // Cassandra 1
     2: "45.76.7.250:27131", // Cassandra 2
     3: "149.28.46.15:27131", // Cassandra 3
+    4: "144.202.3.182:27131", // Cassandra M
     // 0: "107.182.230.233:21516", // Killerhillbilly
   },
 
